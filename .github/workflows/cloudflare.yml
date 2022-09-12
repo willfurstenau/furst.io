@@ -23,5 +23,5 @@ jobs:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: furst
-          directory: /
+          directory: /assets
           gitHubToken: ${{ secrets.GH_TOKEN }}
