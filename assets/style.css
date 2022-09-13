@@ -1,18 +1,22 @@
 body{
-	background: #ffcc99;
-	color: #4d4d4d;
+	background: #202020;
+	/* background: #ffcc99; */
+	color: #666666;
     font-family: 'Hind', sans-serif;
 	text-align: center;
 }
 .main {
+	background: #ffcc99;
     display: inline-block;
     margin: 40px auto 10px;
+	padding: 3%;
+	border-radius: 3%;
 	font-weight: 300;
 }
 h1{
 	font-size: 400%;
 	font-weight: 400;
-	margin-top: 16;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 h2{
