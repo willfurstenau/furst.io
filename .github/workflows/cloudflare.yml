@@ -26,3 +26,6 @@ jobs:
           bucket: furst
           source: ${{ github.workspace }}/assets
           destination: /
+
+      - name: Refresh worker cache
+        run: curl https://furst.io; curl https://furst.io
