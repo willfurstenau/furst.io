@@ -17,11 +17,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: Cloudflare Pages GitHub Action
-        uses: cloudflare/pages-action@v1.1.0
+      - name: R2 Directory Upload
+        uses: willfurstenau/r2-dir-upload@main
         with:
-          apiToken: ${{ secrets.CF_API_KEY }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: furst
-          directory: ./assets
-          gitHubToken: ${{ secrets.GH_TOKEN }}
+          accountid: ${{ secrets.CF_ACCOUNT_ID }}
+          accesskeyid: ${{ secrets.CF_ACCESS_KEY }}
+          secretaccesskey: ${{ secrets.CF_SECRET_KEY }}
+          bucket: furst
+          source: ./assets
+          destination: /
