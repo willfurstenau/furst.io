@@ -13,6 +13,14 @@ body{
 	border-radius: 3%;
 	font-weight: 300;
 }
+.fourohfour {
+	color: ffcc99;
+    display: inline-block;
+    margin: 40px auto 10px;
+	padding: 3%;
+	border-radius: 3%;
+	font-weight: 300;
+}
 h1{
 	font-size: 400%;
 	font-weight: 400;
