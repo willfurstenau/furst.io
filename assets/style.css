@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&display=swap');
+
 body{
 	background: #202020;
 	/* background: #ffcc99; */
 	color: #666666;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
 	text-align: center;
 }
 .main {
@@ -49,8 +51,8 @@ a:active {
     text-decoration: underline;
 }
 
-.fa-li {
-    transform: translateY(15%);
+.icon {
+	color: #666666;
 }
 
 .items {
