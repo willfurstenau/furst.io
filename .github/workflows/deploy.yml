@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Download assets
+      - name: Download fontawesome assets
         run: |
-          mkdir dist/external_assets
+          mkdir -p dist/external_assets/fontawesome
           wget https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-web.zip
           unzip fontawesome-free-7.1.0-web.zip -d ./tmp/
-          mv ./tmp/*/* ./dist/external_assets/
-
+          mv ./tmp/*/webfonts ./dist/external_assets/fontawesome/webfonts
+          mv ./tmp/*/css ./dist/external_assets/fontawesome/css
       
       - name: FTP dir upload
         uses: willfurstenau/ftp-dir-upload@v1
