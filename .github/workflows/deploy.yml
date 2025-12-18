@@ -15,11 +15,11 @@ jobs:
 
       - name: Download fontawesome assets
         run: |
-          mkdir -p dist/external_assets/fontawesome/webfonts dist/external_assets/fontawesome/css
+          mkdir -p dist/external_assets/fontawesome/
           wget https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-web.zip
           unzip fontawesome-free-7.1.0-web.zip -d ./tmp/
-          mv ./tmp/*/webfonts ./dist/external_assets/fontawesome/webfonts
-          mv ./tmp/*/css ./dist/external_assets/fontawesome/css
+          mv ./tmp/*/webfonts ./dist/external_assets/fontawesome/
+          mv ./tmp/*/css ./dist/external_assets/fontawesome/
       
       - name: FTP dir upload
         uses: willfurstenau/ftp-dir-upload@v1
