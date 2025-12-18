@@ -1,0 +1,31 @@
+name: Download assets and deploy webpage to Bunny.net Storage Zone
+
+on:
+  push:
+    branches: [ "main" ]
+    
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Download assets
+        run: |
+          mkdir dist/external_assets
+          wget https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-web.zip
+          unzip fontawesome-free-7.1.0-web.zip -d ./tmp/
+          mv ./tmp/*/* ./dist/external_assets/
+
+      
+      - name: FTP dir upload
+        uses: willfurstenau/ftp-dir-upload@v1
+        with:
+          host: storage.bunnycdn.com
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./dist
+          remote-dir: /
