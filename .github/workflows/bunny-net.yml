@@ -16,7 +16,7 @@ jobs:
       - name: FTP dir upload
         uses: willfurstenau/ftp-dir-upload@main
         with:
-          host: ftp.myhost.com
+          host: storage.bunnycdn.com
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist
