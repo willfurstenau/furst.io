@@ -15,7 +15,7 @@ jobs:
 
       - name: Download fontawesome assets
         run: |
-          mkdir -p dist/external_assets/fontawesome
+          mkdir -p dist/external_assets/fontawesome/webfonts dist/external_assets/fontawesome/css
           wget https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-web.zip
           unzip fontawesome-free-7.1.0-web.zip -d ./tmp/
           mv ./tmp/*/webfonts ./dist/external_assets/fontawesome/webfonts
